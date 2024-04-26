@@ -1,13 +1,99 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 2rem;
+  height: 100vh;
+  color: #222;
+  background: linear-gradient(39deg, rgb(0, 0, 70), blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 112rem;
+  gap: 4rem;
+  padding: 6rem 0;
+  border: 2px solid #222;
+  outline: 2px solid #222;
+  border-radius: 12px;
+  outline-offset: 1.2rem;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 6rem;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+input {
+  font-family: inherit;
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  background-color: #5fb2ff;
+  border-radius: 8px;
+  padding: 1.6rem 3.2rem;
+  border: none;
+  width: 32rem;
+
+  &::placeholder {
+    color: #363131;
+  }
+}
+
+input:focus {
+  outline: 2px solid #5f5b5b;
+}
+
+.weather {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.day {
+  background: linear-gradient(rgb(55, 115, 159), blue);
+  padding: 1.6rem 0 2rem;
+  width: 12.8rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.day span {
+  font-size: 5.2rem;
+}
+
+.day.important {
+  background-color: #ecc5c0;
+  outline: 2px solid #222;
+}
+
+.loader {
+  font-size: 2.4rem;
+  font-weight: 700;
 }
